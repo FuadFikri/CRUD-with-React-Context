@@ -1,10 +1,25 @@
 import React from 'react';
 
+import { Home } from './components/Home';
+import { AddUser } from './components/AddUser';
+import { EditUser } from './components/EditUser';
+import { Route, Switch } from 'react-router';
+import { BrowserRouter as Router, } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
   return (
-    <div className="App">
-      <h1>helo</h1>
-    </div>
+    <div style={{ maxWidth: "30rem", margin: "4rem auto" }}>
+      <Router>
+        <h1>nav</h1>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/add" component={AddUser} />
+          <Route path="/edit/:id" component={EditUser} />
+
+        </Switch>
+
+      </Router>
+    </div >
   );
 }
 
