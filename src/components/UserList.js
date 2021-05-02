@@ -10,7 +10,7 @@ export const UserList = () => {
     return (
         <div>
             <ListGroup className="mt-3">
-                {users.map(user => 
+                {users &&  users.map(user => 
 
                     <ListGroupItem className="d-flex">
                         <strong>{user.name}</strong>
